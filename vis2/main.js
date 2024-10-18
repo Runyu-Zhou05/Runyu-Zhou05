@@ -174,8 +174,8 @@ window.onload = function() {
     ];
 
     window.delays = {
-        'imageDisplay': 1200,
-        'edgeConnection': 2600,
+        'imageDisplay': 700,
+        'edgeConnection': 2100,
         'faultyEdge': 2600,
         'simultaneousClassDisplay': 2000,
     }
@@ -215,7 +215,7 @@ function animationStep(idx) {
             const img = window.allImages[window.classImgIndices[imgClass][imgIndex]];
             img.style.opacity = 1;
             // transition
-            img.style.transition = 'opacity 1s';
+            img.style.transition = 'opacity 0.5s';
             break;
         }
         case 'edgeConnection':
@@ -238,7 +238,7 @@ function animationStep(idx) {
                     setTimeout(() => {
                         popupImage.style.display = 'none';
                     }, 700);
-                }, 1800);
+                }, 1300);
             }, 50);
             break;
         }
